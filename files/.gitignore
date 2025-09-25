@@ -1,0 +1,21 @@
+# Ignorowanie folderów
+node_modules/
+non-interiors/
+db/
+cache/
+[non-streams]/
+non-eup/
+c/
+non-eup2/
+eup-org-fivem-bluza/
+eup-org-fivem-kamza/
+eup-org-fivem-koszulka/
+non-cars/
+bob74_ipl/
+
+# Ignorowanie plików z określonymi rozszerzeniami
+*.zip
+*.rar
+
+# Ignorowanie konkretnego pliku
+Pliki Serwera.zip

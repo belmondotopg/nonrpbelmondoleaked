@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/v4-shims.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://necolas.github.io/normalize.css/7.0.0/normalize.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <div class="tablet-all">
+
+        <!-- Nav -->
+        <div class="tablet-nav">
+            <div class="tablet-logo">
+                <div class="logo"></div>
+                <span>San Andreas<br>State Police</span>
+            </div>
+            <div class="tablet-login">
+                <div class="nav-avatar">
+                    <div class="avatar"></div>
+                </div>
+                <div class="nav-user">
+                    <div class="user"></div>
+                    <span id="grade" style="color: #7a00ec;"></span>
+                    <span id="name" style="font-weight: 500; font-size: 20px;"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="tablet-main">
+
+            <!-- Nav left -->
+            <div class="nav-left">
+                <div class="nav-option" style="margin-top: 35px;">
+                    <div class="nav-select nav-select-color" id="default">
+                        <div><i class="fas fa-fingerprint"></i></div>
+                        <span>Strona główna</span>
+                    </div>
+                </div>
+                <!-- <div class="nav-option">
+                    <div class="nav-select" id="fine">
+                        <div><i class="far fa-file-alt"></i></div>
+                        <span>Mandat</span>
+                    </div>
+                </div> -->
+                <div class="nav-option">
+                    <div class="nav-select" id="jail">
+                        <div><i class="far fa-file-word"></i></div>
+                        <span>Więzienie</span>
+                    </div>
+                </div>
+                <div class="nav-option">
+                    <div class="nav-select" id="tariff">
+                        <div><i class="fas fa-file-invoice-dollar"></i></div>
+                        <span>Taryfikator</span>
+                    </div>
+                </div>
+                <!-- <div class="nav-option">
+                    <div class="nav-select" id="file">
+                        <div><i class="far fa-address-card"></i></div>
+                        <span>Kartoteka</span>
+                    </div>
+                </div>
+                <div class="nav-option">
+                    <div class="nav-select" id="check-car">
+                        <div><i class="fas fa-car"></i></div>
+                        <span>Baza pojazdów</span>
+                    </div>
+                </div> -->
+                <div class="nav-option">
+                    <div class="nav-select" id="note">
+                        <div><i class="far fa-sticky-note"></i></div>
+                        <span>Notatnik</span>
+                    </div>
+                </div>
+                <div class="nav-option">
+                    <div class="nav-select" id="announcements">
+                        <div><i class="fas fa-bullhorn"></i></div>
+                        <span>Ogłoszenia</span>
+                    </div>
+                </div>
+                <div class="nav-option">
+                    <div class="nav-select" id="raports">
+                        <div><i class="far fa-clipboard"></i></div>
+                        <span>Raporty</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-content">
+
+                <!-- Default -->
+                <div class="default-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Strona główna</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Witaj w policyjnym systemie LSPD</div>
+                    </div>
+                    <div class="main">
+                        <div class="default-top">
+                            <div class="default-left">
+                                <div class="default-left-top">
+                                    <div class="default-box">
+                                        <div class="default-title" style="padding: 35px 0 0 15px">Mieszkanców w bazie:</div>
+                                        <div class="default-subtitle" id="people-counter" style="padding: 25px 0 0 15px">0</div>
+                                    </div>
+                                    <div class="default-box">
+                                        <div class="default-title" style="padding: 35px 0 0 15px">Pojazdów w bazie:</div>
+                                        <div class="default-subtitle" id="car-counter" style="padding: 25px 0 0 15px">0</div>
+                                    </div>
+                                </div>
+                                <div class="default-left-bottom">
+                                    <div class="default-box" style="width: 95%; height: 80%;">
+                                        <div class="default-title" style="padding: 15px 0 0 15px; text-align: center;">Wystawionych mandatów:</div>
+                                        <div class="default-counter" style="margin: 0 0 0 15px;">
+                                            <div class="default-counter-week">
+                                                <span id="week-counter">0</span>
+                                                <span>Tego tygodnia</span>
+                                            </div>
+                                            <div class="default-counter-month">
+                                                <span id="week-month">0</span>
+                                                <span>Tego miesiąca</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="default-right">
+                                <div class="default-box" style="width: 90%; height: 90%;">
+                                    <div class="top">
+                                        <div class="default-title" style="padding: 15px 0 0 15px;">Aktualnie na służbie:</div>
+                                    </div>
+                                    <div class="default-duty-box">
+                                        <div class="default-duty">
+                                            <div class="duty-who">Funkcjonariusz</div>
+                                            <div class="duty-number">Stopien</div>
+                                            <div class="duty-online">Na służbie</div>
+                                        </div>
+                                        <div id="onduty-info" class="default-duty-info-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="default-bottom">
+                            <div class="default-box" style="width: 96%; height: 90%;">
+                                <div class="default-title" style="padding: 15px 0 0 15px;">Ostatnie wyroki</div>
+                                <div class="default-duty" style="width: 95%; text-align: center; line-height: 33px; display: flex; justify-content: center; align-items: center;">
+                                    <div class="default-fineid">Numer mandatu</div>
+                                    <div class="default-person">Karany</div>
+                                    <div class="default-date">Data</div>
+                                    <div class="default-officer">Funkcjonariusz</div>
+                                    <div class="default-fine">Kwota</div>
+                                    <div class="default-jail">Więzienie</div>
+                                </div>
+                                <div id="ostatniemandaty-info" class="default-duty-info-box" style="width: 95%; height: 67%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fine -->
+                <!-- <div class="fine-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Mandat</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Tutaj możesz wystawić komuś mandat</div>
+                    </div>
+                    <div class="main">
+                        <div class="main-top" style="display: flex; height: 50%;">
+                            <div class="fine-left" style="top: 10%; align-items: center; justify-content: center;">
+                                <div class="inputMenu-div">
+                                    <select id="mandatPlayer" class="nearbyPlayers" >
+                                    </select>
+                                </div>
+                                <input id="fee-mandat" type="number" placeholder="Kwota" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Kwota'" onkeypress="return this.value.length < 7;" oninput="if(this.value.length>=7) { this.value = this.value.slice(0,7); }" required>
+                            </div>
+                            <div class="fine-right" style="top: 10%;">
+                                <textarea id="text-mandat" rows="18" placeholder="Treść mandatu" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Treść mandatu'"></textarea>
+                            </div>
+                        </div>
+                        <div class="main-bottom">
+                            <div id="wystaw-mandat-button" class="button" style="top: -7%;">Wystaw mandat</div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Jail -->
+                <div class="jail-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Więzienie</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Tutaj możesz wsadzić kogoś do więzienia</div>
+                    </div>
+                    <div class="main">
+                        <div class="main-top" style="display: flex; height: 50%;">
+                            <div class="jail-left" style="top: 14%; align-items: center; justify-content: center;">
+                                <div class="inputMenu-div">
+                                    <select id="jailPlayer" class="nearbyPlayers" >
+                                    </select>
+                                </div>
+                                <input id="fee-wiezienie" type="number" id="input-cost" placeholder="Kwota" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Kwota'" onkeypress="return this.value.length < 7;" oninput="if(this.value.length>=7) { this.value = this.value.slice(0,7); }" required>
+                                <input id="length-wiezienie" type="number" placeholder="Czas więzienia (10 = 3 pracy)" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Czas więzienia (minuty)'" onkeypress="return this.value.length < 3;" oninput="if(this.value.length>=3) { this.value = this.value.slice(0,3); }" required>
+                            </div>
+                            <div class="jail-right" style="top: 14%;">
+                                <textarea id="text-wiezienie" rows="18" placeholder="Powód więzienia" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Powód Więzienia'" style="height: 180px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="main-bottom">
+                            <div id="wystaw-wiezienie-button" class="button" style="width: 200px;">Wsadź do więzienia</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tariff -->
+                <div class="tariff-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Taryfikator</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Sprawdź ile komuś grozi za dane przewinienia</div>
+                    </div>
+                    <div class="main" style="display: flex;">
+                        <div class="tariff-left">
+                            <div class="tariff-button-box">
+                                <div class="tariff-button tariff-button-selected default-tariff" id="tariff-1">Wykroczenia drogowe</div>
+                                <div class="tariff-button" id="tariff-2">Przestępstwa lekkie</div>
+                                <div class="tariff-button" id="tariff-3">Przestępstwa ciężkie</div>
+                                <div class="tariff-button" id="tariff-4">Przestępstwa kontrabandą/substancje</div>
+                                <div class="tariff-button" id="tariff-5">Przestępstwa związane z bronią</div>
+                            </div>
+                            <div class="tariff-counter">
+                                <div class="tariff-counter-text"></div>
+                                <div class="tariff-counter-cost">$<span id="tariff-cost">0</span>&nbsp;|&nbsp;<span id="tariff-minutes">0</span>miesięcy</div>
+                            </div>
+                        </div>
+                        <div class="tariff-right">
+                            <div class="tariff-right-content">
+                                <div class="tariff-undertitle">
+                                    <div class="tariff-title">Wykroczenia drogowe</div>
+                                </div>
+                                <div class="tariff-box" id="tariff-1-1">
+                                    <div id="Wykroczenia_drogowe" class="tariff-holder-box" style="margin-top: 2%;"></div>
+                                </div>
+                                <div class="tariff-box" id="tariff-2-2">
+                                    <div id="Przestępstwa_lekkie" class="tariff-holder-box" style="margin-top: 2%;"></div>
+                                </div>
+                                <div class="tariff-box" id="tariff-3-3">
+                                    <div id="Przestępstwa_ciężkie" class="tariff-holder-box" style="margin-top: 2%;"></div>
+                                </div>
+                                <div class="tariff-box" id="tariff-4-4">
+                                    <div id="Przestępstwa_związane_z_kontrabandą_i_nielegalnymi_substancjami" class="tariff-holder-box" style="margin-top: 2%;"></div>
+                                </div>
+                                <div class="tariff-box" id="tariff-5-5">
+                                    <div id="Przestępstwa_związane_z_bronią" class="tariff-holder-box" style="margin-top: 2%;"></div>
+                                </div>
+                                <div class="tariff-copy">
+                                    <div class="tariff-copy-left">
+                                        <div class="tariff-copy-button">Skopiuj zarzuty</div>
+                                        <div class="tariff-clear-button">Wyczyść zarzuty</div>
+                                    </div>
+                                    <div class="tariff-copy-right">
+                                        <input id="tariff-search" onkeyup="tariffsearch()" style="height: 100%; margin: 0 30px;" type="text" placeholder="Wyszukaj" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wyszukaj'">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Notes -->
+                <div class="note-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Notatnik</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Tutaj możesz zapisać najważniejsze rzeczy</div>
+                    </div>
+                    <div class="main">
+                        <textarea id="note-textbox" rows="18" placeholder="Wpisz treść" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wpisz treść'" style="height: 80%; width: 85%; top: 5%;"></textarea>
+                    </div>
+                </div>
+
+                <!-- Announcements -->
+                <div class="announcements-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Ogłoszenia</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Tutaj możesz napisać ogłoszenie</div>
+                    </div>
+                    <div class="main" style="display: flex;">
+                        <div class="announcements-main-left">
+                            <textarea id="announce_textbox" rows="18" placeholder="Treść ogłoszenia" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Treść ogłoszenia'" style="margin-top: 15%; height: 25%;"></textarea>
+                            <div id="send_announce" class="button" style="width: 220px; top: 5%;">Wyślij ogłoszenie</div>
+                        </div>
+                        <div class="announcements-main-right">
+                            <div class="announcements-content-box">
+                                <div class="announcements-content-menu">
+                                    <div class="announcements-content-button">Ogłoszenia</div>
+                                </div>
+                                <div class="announcements-content-submenu">
+                                    <div style="width: 43%;">Treść</div>
+                                    <div style="width: 20%;">Podpis FP</div>
+                                    <div style="width: 20%;">Data</div>
+                                    <div class="boss-column" style="width: 5%;">Usuń</div>
+                                </div>
+                                <div class="announcements-content-undermenu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raports -->
+                <div class="raport-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Raporty</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Tutaj możesz napisać raport</div>
+                    </div>
+                    <div class="main" style="display: flex;">
+                        <div class="raport-main-left">
+                            <textarea id="raport_textbox" rows="18" placeholder="Treść raportu" required onfocus="this.placeholder = ''" onblur="this.placeholder = 'Treść raportu'" style="margin-top: 15%; height: 25%;"></textarea>
+                            <div id="send_raport" class="button" style="width: 220px; top: 5%;">Wyślij Raport</div>
+                        </div>
+                        <div class="raport-main-right">
+                            <div class="raport-content-box">
+                                <div class="raport-content-menu">
+                                    <div class="raport-content-button">Raporty</div>
+                                </div>
+                                <div class="raport-content-submenu">
+                                    <div style="width: 43%;">Treść</div>
+                                    <div style="width: 20%;">Podpis FP</div>
+                                    <div style="width: 20%;">Data</div>
+                                    <div class="boss-column" style="width: 5%;">Usuń</div>
+                                </div>
+                                <div class="raport-content-undermenu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dispatch -->
+                <div class="dispatch-content">
+                    <div class="top">
+                        <div class="title" style="padding: 30px 0 0 30px">Disptach</div>
+                        <div class="sub-title" style="padding: 5px 0 0 30px">Tutaj możesz używać dispatcha</div>
+                    </div>
+                    <div class="main">
+                        <div class="dispatch-box">
+							<iframe src="https://docs.google.com/spreadsheets/d/1UbDN17C8pXLQ2FDP5ghjMHIeatZ5zZcba0a78YwHi9k/edit#gid=1693772866"></iframe>
+                        <!--    <iframe src="https://docs.google.com/spreadsheets/d/1X1Y6UmHC-Yy_kLlizIdn2H5ZoZiHKf4--FMRGTvnJJw/edit?usp=sharing"></iframe> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="holder">
+            <div class="loading-logo"></div>
+            <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- <link href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css" rel="stylesheet"> -->
+        <script src="https://kit.fontawesome.com/b4e744b74d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="watermark-box">
+            <div class="text">
+                <span>[<span id="player-id">0</span>] NonRP.eu</span>
+            </div>
+            <div class="logo">
+                <svg width="421" height="430" viewBox="0 0 421 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M88.4157 15.6914L38.0987 235.538C35.2325 248.061 44.7477 260 57.5946 260H73.3914C80.026 260 86.2288 263.29 89.9498 268.783L104.704 290.564C112.886 302.641 131.514 299.277 134.954 285.1C138.147 271.939 154.798 267.766 163.822 277.866L293.091 422.559C303.835 434.585 323.664 429.603 327.447 413.926L391.621 148.006C395.659 131.277 378.084 117.598 362.858 125.619L358.957 127.674C351.243 131.738 341.784 130.336 335.581 124.208L331.083 119.765C319.821 108.64 300.713 114.387 297.456 129.878L291.07 160.244C287.618 176.661 266.704 181.789 256.05 168.831L123.36 7.45145C112.81 -5.37976 92.1218 -0.501455 88.4157 15.6914Z" fill="#8C9EFF"/>
+                    <path d="M405.532 92.504L420.292 37.1533C423.678 24.4563 414.108 12 400.968 12H342.138C332.721 12 324.58 18.5691 322.59 27.7733L311.54 78.8793C310.572 83.3546 311.798 88.0229 314.84 91.4451C316.892 93.7533 319.633 95.338 322.658 95.9637L325.439 96.5391C330.003 97.4833 334.093 99.9914 337.004 103.63L337.943 104.804C344.039 112.423 354.743 114.532 363.273 109.793L365.21 108.717C368.969 106.628 373.302 105.807 377.566 106.375L383.564 107.175C393.534 108.505 402.941 102.223 405.532 92.504Z" fill="white"/>
+                    <path d="M99.4066 411.239L117.797 343.485C120.253 334.437 116.095 324.898 107.795 320.539L102.828 317.931C99.7937 316.337 97.2197 313.99 95.3533 311.116L81.7141 290.109C78.0257 284.428 71.7128 281 64.9397 281H41.5889C37.748 281 34.0139 282.265 30.9636 284.599C27.673 287.118 25.3838 290.723 24.5043 294.772L1.26636 401.755C-1.44121 414.22 8.05486 426 20.8106 426H80.1049C89.1329 426 97.0417 419.952 99.4066 411.239Z" fill="white"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_0_1" x1="192.452" y1="-28.1426" x2="195.5" y2="445" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8C9EFF"/>
+                    <stop offset="0.745" stop-color="#6573C3"/>
+                    </linearGradient>
+                    </defs>
+                </svg>  
+            </div>
+        </div>
+
+        <div id="jestemkurwom" class="welcome-wrapper">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+
+            
+            <div class="main" id="main-cwel">
+                <div class="top-text">
+                    <span>Witaj, @<strong id="nickname">bogatyskurwiel</strong></span>
+                    <span id="textxdxddx">Mamy nadzieje, ze spedzisz u nas dobrze czas.</span>
+                </div>
+                <div class="line"></div>
+                <div class="bottom-text" id="bottom-text">
+                    Na naszym serwerze stawiamy na rozgrywkę z dala od miejskich ulic.
+                    Główna akcja rozgrywa się na terenach Sandy Shores i otaczających je dzikich przestrzeniach,
+                    co pozwala graczom w pełni wczuć się w klimat rywalizacji w klasycznym bojówkarskim stylu.
+                </div>
+                <div class="footer">
+                    
+                    <div class="circle-footer">
+                        <div class="dot-1"></div>
+                        <div class="dot-2"></div>
+                        <div class="dot-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="button" id="buttonpozdro">
+                <span>Zrozumiałem!</span>
+            </div>
+        </div>
+        <div id="notifications-wrapper"></div>
+        <div id="progress-wrapper"></div>
+        <div id="top-organizations-box">
+            <div class="top-organizations-wrapper">
+                <div class="header">
+                    <span>Tabela rankingu</span>
+                </div>
+                <div class="bottom">
+                    <div class="panel">
+                        <h1><i class="fa-solid fa-gun"></i>Bitki</h1>
+                        <div class="bitki" id="btk">
+                        </div>
+                        <div class="rankingtwojamama" id="btk-me">
+                        </div>
+                    </div>
+            
+                    <div class="panel">
+                        <h1><i class="fa-solid fa-flag-swallowtail"></i>Przejęcia stref</h1>
+                        <div class="strefy" id="stf">
+                        </div>
+                    </div>
+            
+                    <div class="panel">
+                        <h1><i class="fa-solid fa-user"></i>Ranking</h1>
+                        <div class="users" id="usr">
+                        </div>
+                        <div class="rankingtwojamama" id="usr-me">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

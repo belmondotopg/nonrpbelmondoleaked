@@ -1,0 +1,1 @@
+NON = exports['non-classes']:getSharedObject()

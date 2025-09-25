@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Montserrat';
+    transition: .3s all;
+    color: #fff;
+    margin: 0;
+}
+
+
+
+body {
+    overflow: hidden;
+    /* background-color: #000; */
+}
+
+
+/* HUD */
+
+.hud-collapse {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 2vh; */
+    bottom: 0vh;
+    left: 50%;
+    font-size: 1.2vh;
+    color: #8C9EFF;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 16vh;
+    height: 3vh;
+    border-radius: 1vh 1vh 0 0;
+    background-color: #15171EBE;
+}
+
+.hud-collapse i {
+    padding-top: .5vh;
+    font-weight: 300;
+    color: #8C9EFF;
+}
+
+.hud-box {
+    background-color: #15171EBE;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1vh;
+    left: 50%;
+    border-radius: 1vh;
+    transform: translateX(-50%);
+    width: auto;
+    height: 5vh;
+    /* overflow: hidden; */
+    z-index: 1000;
+}
+
+.hud-box .icon {
+    font-size: 1.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .1vh;
+    margin: 0 .5vh;
+}
+
+.hud-box .hp {
+    position: relative;
+    bottom: 0;
+    display: block;
+    border-radius: 1.25vh;
+    width: 4.5vh;
+    height: 4.5vh;
+    line-height: 4.5vh;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.hud-box .hp i {
+    padding: .1vh;
+    color: var(--hud-color);
+    /* filter: drop-shadow(0px 0px 20px var(--hud-color)); */
+}
+
+.hud-box .armor {
+    position: relative;
+    bottom: 0;
+    display: block;
+    border-radius: 1.25vh;
+    width: 4.5vh;
+    height: 4.5vh;
+    line-height: 4.5vh;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.hud-box .armor i {
+    padding: .1vh;
+    color: var(--hud-color);
+    /* filter: drop-shadow(0px 0px 20px var(--hud-color)); */
+}
+
+
+.hud-box .microphone {
+    position: relative;
+    bottom: 0;
+    display: block;
+    border-radius: 1.25vh;
+    width: 4.5vh;
+    height: 4.5vh;
+    line-height: 4.5vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hud-box .microphone i {
+    padding: .1vh;
+    color: var(--hud-color);
+    /* filter: drop-shadow(0px 0px 20px var(--hud-color)); */
+}
+
+
+/* ANIM */
+
+@keyframes Animacja {
+    0% {
+        bottom: -20vh;
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+@keyframes Animacja2 {
+    0% {
+        left: -5vh;
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+
+@keyframes Animacja3 {
+    0% {
+        right: -5vh;
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}

@@ -1,0 +1,53 @@
+/* CAR */
+
+.car-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: normal;
+    position: absolute;
+    gap: 1vh;
+    right: 1.5vh;
+    bottom: 7vh;
+    /* background-color: #00000085; */
+    width: 26.5vh;
+    height: auto;
+}
+
+.car-box .speed-text-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: center;
+    gap: .5vh;
+    color: #fff;
+    font-size: 5vh;
+}
+
+.car-box .speed-text-box #speed-number {
+    position: relative;
+    top: 1vh;
+    color: #fff;
+}
+
+.car-box .speed-text-box #kmh {
+    font-size: 1.5vh;
+}
+
+.car-box .progress-speed {
+    width: 100%;
+    height: 2vh;
+    border-radius: 1vh;
+    background-color: rgb(21, 23, 30, .75);
+}
+
+.car-box .progress-speed .progress-speed-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 1vh;
+    background-color: #8C9EFF;
+}
